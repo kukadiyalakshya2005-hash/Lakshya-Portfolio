@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lakshya Kukadiya | Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:linear-gradient(to right,#1c2544,#0f1425);  
+      color:rgb(232, 226, 48);
+    }
+
+    /* Navbar */
+    nav{
+      width:100%;
+      background:#bcbec0e1;
+      padding:15px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#030b0f;
+      font-size:35px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:rgb(42, 18, 7);
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    nav ul li a:hover{
+      color:#ffffff;
+    }
+
+    /* Hero Section */
+ .hero{
+    height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 100px;
+    background:linear-gradient(to right,#0f1425,#1c2544);
+}
+
+.hero img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    border:8px solid #38bdf8;
+    object-fit:cover;
+    box-shadow:0 0 25px #38bdf8;
+}
+
+    .hero h2{
+      font-size:52px;
+      margin-bottom:10px;
+    }
+
+    .hero span{
+      color:#35a7d7;
+    }
+
+    .hero p{
+      max-width:700px;
+      line-height:1.8;
+      font-size:22px;
+      margin-top:10px;
+    }
+
+    .btn{
+      margin-top:25px;
+      padding:12px 25px;
+      background:#38bdf8;
+      color:black;
+      border:none;
+      border-radius:8px;
+      font-size:18px;
+      cursor:pointer;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+    }
+
+    /* Section */
+    section{
+      padding:100px 50px;
+    }
+
+    .title{
+      text-align:left;
+      margin-bottom:50px;
+      font-size:55px;
+      color:#38bdf8;
+    }
+
+    /* About */
+    .about{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about img{
+    width:350px;
+    height:350px;
+    border-radius:20px;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 25px #38bdf8;
+}
+
+.about-text{
+    flex:1;
+    min-width:300px;
+    max-width:700px;
+    font-size:25px;
+    line-height:1.8;
+}
+
+    /* Skills */
+        
+    .skills-container{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:30px;
+    }
+
+    /* Skill Box */
+    .skill{
+        background:#1e293b;
+        padding:35px;
+        border-radius:20px;
+        text-align:center;
+        transition:0.4s;
+    }
+
+    /* Hover Effect */
+    .skill:hover{
+        transform:translateY(-10px);
+        background:#334155;
+        box-shadow:0 0 25px #38bdf8;
+    }
+
+    /* Skill Images */
+    .skill img{
+        width:90px;
+        height:90px;
+        object-fit:contain;
+        margin-bottom:20px;
+    }
+
+    /* Skill Heading */
+    .skill h2{
+        color:#38bdf8;
+        font-size:25px;
+    }
+
+    /* Projects */
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+    }
+
+    .project-card{
+      background:#1e293b;
+      padding:40px;
+      border-radius:25px;
+      transition:0.3s;
+      font-size: 19px;
+    }
+
+    .project-card:hover{
+      transform:scale(1.05);
+    }
+
+    .project-card h3{
+      color:#38bdf8;
+      margin-bottom:30px;
+      font-size: 30px;
+    }
+
+    /* Contact */
+    .contact{
+      text-align:left;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    .social-icons{
+      margin-top:20px;
+    }
+
+    .social-icons a{
+      color:white;
+      font-size:30px;
+      margin:0 15px;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      color:#38bdf8;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#111827;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero h2{
+        font-size:35px;
+      }
+
+      section{
+        padding:80px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Portfolio</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+
+  <section class="hero" id="home">
+
+    <!-- Left Side Image -->
+    <img src="Portfolio-Picture.jpg" alt="profile">
+
+    <!-- Right Side Content -->
+    <div class="hero-content">
+
+        <h2>Hello, I'm <span>Lakshya Kukadiya</span></h2>
+
+        <p>
+           Computer Engineering student at Madhuben Bhanubhai Patel Institute of Technology.
+        </p>
+        <p>   
+            Passionate about Web Development, Programming, Software Engineering, and creating modern technology solutions.
+        </p>
+
+        <br>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
+
+</section>
+
+ <!-- About -->
+<section id="about">
+
+    <h1 class="title">About Me</h1>
+
+    <div class="about">
+
+        <!-- Left Side Text -->
+        <div class="about-text">
+
+            <p>
+                I am a dedicated Computer Engineering student with strong interest in
+                Web Development, Web Technologies, Cloud Computing,
+                and problem solving.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy building responsive websites and learning modern
+                programming technologies to improve my skills continuously.
+            </p>
+
+        </div>
+
+        <!-- Right Side Image -->
+        <img src="About-Picture.jpg" alt="About Image">
+
+    </div>
+
+</section>
+
+  <!-- Skills -->
+<section id="skills">
+
+    <h1 class="title">My Skills</h1>
+
+    <div class="skills-container">
+
+        <!-- HTML -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML">
+            <h2>HTML</h2>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+            <h2>CSS</h2>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+            <h2>JavaScript</h2>
+        </div>
+
+        <br>
+
+        <!-- Java -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+            <h2>Java</h2>
+        </div>
+
+        <!-- Python -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+            <h2>Python</h2>
+        </div>
+
+        <!-- SQL -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="SQL">
+            <h2>SQL</h2>
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- Projects -->
+  <section id="projects">
+
+    <h1 class="title">Projects</h1>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>AgreeMitra E-Commerce website</h3>
+        <p>
+          I develop the website based on selling and buying the grain become easy for provider and customer.
+        </p>
+        <br>
+        <p>
+          It also help farmer to do the right procedure to grow healthy grain by adding AI ChatBot.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>FoodHub E-commerce Website</h3>
+        <p>
+          I develop the website for the distance students and employees to get the home made and trusted food.
+        </p>
+        <br>
+        <p>  
+          It also check the quality of food and rating system with weekly and monthly subscription.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+
+    <h1 class="title">Contact Me</h1>
+
+    <div class="contact">
+
+      <p><i class="fa-solid fa-envelope"></i> kukadiyalakshya2005@gmail.com</p>
+
+      <p><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</p>
+
+      <div class="social-icons">
+
+        <a href="https://www.instagram.com/mr_kukadiya_0011/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://github.com/kukadiyalakshya2005-hash" target="_blank">
+        <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/lakshya-kukadiya-516574325/?skipRedirect=true" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Lakshya Kukadiya | Computer Engineering Portfolio</p>
+  </footer>
+
+</body>
+</html>

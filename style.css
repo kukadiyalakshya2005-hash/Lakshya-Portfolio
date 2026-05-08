@@ -1,0 +1,271 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#7010a4;
+    color:white;
+}
+
+/* Navbar */
+nav{
+    width:100%;
+    background:#111827;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    backdrop-filter: blur(10px);
+}
+
+nav h1{
+    color:#38bdf8;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-size:18px;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    padding:20px;
+    background:linear-gradient(to right,#0f172a,#1e293b);
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    object-fit:cover;
+    margin-bottom:20px;
+    transition:0.5s;
+}
+
+.hero img:hover{
+    transform:scale(1.08) rotate(3deg);
+    box-shadow:0 0 30px #38bdf8;
+}
+
+.hero h2{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:700px;
+    line-height:1.8;
+    font-size:18px;
+    margin-top:10px;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:black;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #38bdf8;
+}
+
+/* Section */
+section{
+    padding:100px 50px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+    color:#38bdf8;
+}
+
+/* About */
+.about{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-text{
+    max-width:700px;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Skills */
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.skill:hover{
+    transform:translateY(-10px);
+    background:#334155;
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+.skill i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:30px;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#38bdf8;
+    transform:scale(1.3);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    margin-top:40px;
+}
+
+/* Animation */
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .hero h2{
+        font-size:35px;
+    }
+
+    section{
+        padding:80px 20px;
+    }
+
+}
